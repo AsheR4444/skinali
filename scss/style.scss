@@ -1,0 +1,214 @@
+// == Imports ==
+@import 'font.scss';
+@import 'normalize.scss';
+// == /Imports ==
+
+// == Variables ==
+$text-color:#262626;
+$text-light:#7b7b79;
+$col-primary: #507fe1;
+// == /Variables ==
+
+// == Mixins == 
+@mixin Proxima {
+    font-family: 'Proxima Nova Rg', sans-serif;
+}
+@mixin italic {
+    font-family: 'Proxima Nova RgIt', sans-serif;
+}
+@mixin LtI {
+    font-family: 'Proxima Nova LtIt', sans-serif;
+}
+@mixin NoldIt {
+    font-family: 'Proxima Nova LtIt', sans-serif;
+}
+@mixin Bold {
+    font-family: 'Proxima Nova Semibold', sans-serif;
+}
+@mixin button{
+    font-size: 12px;
+    text-transform: uppercase;
+    @include Bold;
+    background: $col-primary;
+}
+@mixin main-button{
+    @include button;
+    padding: 25px 45px;
+    border: none;
+    color: #fff;
+}
+// == /Mixins == 
+
+// == Common ==
+body{
+    @include Proxima;
+    font-size: 16px;
+    color: $text-color;
+}
+.section-inner{
+    margin: 0 auto;
+    max-width: 1170px;
+    @media (max-width:1199px) {
+        max-width: 960px;
+    }
+    @media (max-width:991px) {
+        max-width: 750px;
+    }
+    @media (max-width:768px) {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+.section-outer{
+    padding:0 20px;
+}
+.menu-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(#510bba, 0.1);
+    border-left: 1px solid rgba(#510bba, 0.1);
+    height: 80px;
+    width: 70px;
+    &__line{
+        display: block;
+        height: 3px;
+        width: 20px;
+        background-color: $col-primary;
+        margin-top: 4px;
+    }
+}
+.logo{
+    &__name{
+        @include Bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.54px;
+        display: block;
+        margin-bottom: 3px;
+    }
+    &__text{
+        display: block;
+        color: #6b6b6b;
+        font-size: 14px;
+    }
+}
+.button-o{
+    @include button;
+    background-color: #fff;
+    color: #507fe1;
+    padding: 17px 22px;
+    border: 2px solid $col-primary;
+    @media (max-width:576px) {
+        font-size: 10px;
+    }
+}
+// == /Common ==
+
+
+// == Header ==
+.menu{
+    position: fixed;
+    top: 80px;
+    padding: 16px 0;
+    background-color: $col-primary;
+    width: 100%;
+    transition: 0.2s;
+    z-index: 0;
+    transform: translateY(-100%);
+    &_active{
+        transform: translateY(0%);
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+    }
+    &__link{
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 25px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    @media (max-width:576px) {
+        height: 50%;
+        &__nav{
+            flex-direction: column;
+        }
+        &__link{
+            margin-bottom: 20px;
+        }
+    }
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    z-index: 99;
+    &-wrapper{
+        display: flex;
+        min-height: 80px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__number{
+        text-align: right;
+    }
+    &__phone{
+        display: block;
+        font-size: 19px;
+        @include Bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-bottom: 3px;
+        color: $text-color;
+    }
+    &__work-time, &__mail{
+        color: $text-light;
+        font-size: 14px;
+        font-weight: 300;
+        display: block;
+    }
+    &__mail{}
+    &__button{}
+    @media (max-width:991px) {
+        &__number{
+            display: none;
+        }
+    }
+    @media (max-width:576px) {
+        &__logo{
+            display: none;
+        }
+    }
+}
+.hero{
+    background: #f1f1f1 url(../img/header-bg.png) no-repeat center top 60px;
+    background-size: contain;
+    padding-top: 180px;
+    padding-bottom: 270px;
+    &__title{
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 45px;
+    }
+    &__subtitle{
+        font-size: 30px;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 65px;
+    }
+    &__button{
+        @include main-button;
+    }
+    @media (max-width:991px) {
+        background-size: cover;
+        background-position: top left 30%;
+    }
+}
+// == /Header ==
