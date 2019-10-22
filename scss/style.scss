@@ -61,6 +61,25 @@ body{
         padding: 0 20px;
     }
 }
+.section{
+    padding: 100px 0;
+    &-title{
+        @include Bold;
+        font-size: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__title{
+        margin-bottom: 100px;
+    }
+    @media (max-width:576px) {
+        padding: 60px 0;
+        &__title{
+            font-size: 24px;
+        }
+    }
+}
 .menu-button{
     display: flex;
     flex-direction: column;
@@ -343,6 +362,42 @@ body{
     }
 }
 // == /offer ==
+
+// == features ==
+.feature{
+    &-block{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &__item{
+            flex-basis: 33%;
+            text-align: center;
+            margin-bottom: 110px;
+        }
+        &__img{}
+        &__text{
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 300;
+        }
+    }
+    @media (max-width:991px) {
+        &-block{
+            &__item{
+                flex-basis: 50%;
+            }
+        }
+    }
+    @media (max-width:768px) {
+        &-block{
+            &__item{
+                flex-basis: 100%;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+// == /features ==
 
 
 // /main
