@@ -414,7 +414,26 @@ body {
   background: #507fe1;
   padding: 25px 45px;
   border: none;
-  color: #fff; }
+  color: #fff;
+  text-decoration: none; }
+  .button-fitting, .button-add {
+    padding: 10px;
+    text-transform: uppercase;
+    border: none;
+    font-size: 11px;
+    font-weight: 400;
+    height: 30px; }
+  .button-fitting {
+    color: #507fe1;
+    background-color: #fff; }
+  .button-add {
+    background-color: #7c9fe8;
+    color: #fff; }
+  .button-like {
+    background-color: #255fd9;
+    height: 30px;
+    width: 30px;
+    border: none; }
 
 .button-o {
   font-size: 12px;
@@ -539,7 +558,8 @@ body {
     background: #507fe1;
     padding: 25px 45px;
     border: none;
-    color: #fff; }
+    color: #fff;
+    text-decoration: none; }
   @media (max-width: 991px) {
     .hero {
       background-size: cover;
@@ -638,3 +658,88 @@ body {
   .feature-block__item {
     flex-basis: 100%;
     margin-bottom: 50px; } }
+
+.catalog {
+  background-color: #f5f6f8; }
+  .catalog-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .catalog-card {
+    position: relative;
+    max-width: 570px;
+    margin-bottom: 30px;
+    box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1); }
+    .catalog-card__img {
+      display: block; }
+    .catalog-card__buttons {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex; }
+    .catalog-card__tag {
+      font-family: 'Proxima Nova Semibold', sans-serif;
+      color: #fff;
+      background-color: rgba(80, 127, 225, 0.6);
+      padding: 10px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase; }
+  .catalog__link {
+    margin-top: 60px;
+    text-align: center; }
+    .catalog__link__button {
+      padding: 25px 30px;
+      display: inline-block; }
+  .catalog__description {
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 300;
+    display: block; }
+  @media (max-width: 1199px) {
+    .catalog-block {
+      justify-content: center; }
+    .catalog-card {
+      min-width: 470px; }
+    .catalog__link {
+      margin-top: 30px; } }
+
+.facts__heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px; }
+
+.facts__title {
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  font-size: 24px;
+  font-weight: 400; }
+
+.facts__links-more {
+  font-size: 16px;
+  color: #507fe1; }
+
+.facts-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .facts-block__item {
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px; }
+  .facts-block__img {
+    height: 200px;
+    overflow: hidden; }
+  .facts-block__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #262626;
+    min-height: 80px; }
+
+@media (max-width: 1199px) {
+  .facts-block {
+    justify-content: space-around; } }

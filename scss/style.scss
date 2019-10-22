@@ -38,6 +38,7 @@ $bg-third: #f5f6f8;
     padding: 25px 45px;
     border: none;
     color: #fff;
+    text-decoration: none;
 }
 // == /Mixins == 
 
@@ -114,6 +115,28 @@ body{
 }
 .button{
     @include main-button;
+    &-fitting, &-add{
+        padding: 10px;
+        text-transform: uppercase;
+        border:none;
+        font-size: 11px;
+        font-weight: 400;
+        height: 30px;
+    }
+    &-fitting{
+        color: $col-primary;
+        background-color: #fff;
+    }
+    &-add{
+        background-color: lighten($col-primary,10%);
+        color: #fff;
+    }
+    &-like{
+        background-color: darken($col-primary, 10%);
+        height: 30px;
+        width: 30px;
+        border:none;
+    }
 }
 .button-o{
     @include button;
@@ -363,7 +386,7 @@ body{
 }
 // == /offer ==
 
-// == features ==
+// == feature ==
 .feature{
     &-block{
         display: flex;
@@ -397,7 +420,114 @@ body{
         }
     }
 }
-// == /features ==
+// == /feature ==
 
+// == catalog ==
+.catalog{
+    background-color: $bg-third;
+    &-block{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &-card{
+        position: relative;
+        max-width: 570px;
+        margin-bottom: 30px;
+        box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+        &__img{
+            display: block;
+        }
+        &__buttons{
+            position: absolute;
+            bottom: 0; right: 0;
+            display: flex;
+        }
+        &__tag{
+            @include Bold;
+            color: #fff;
+            background-color: rgba($col-primary, $alpha: 0.6);
+            padding: 10px;
+            position: absolute;
+            top: 10px; left: 10px;
+            font-size: 12px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+    &__link{
+        margin-top: 60px;
+        text-align: center;
+        &__button{
+            padding: 25px 30px;
+            display: inline-block;
+        }
+    }
+    &__description{
+        margin-top: 25px;
+        font-size: 16px;
+        font-weight: 300;
+        display: block;
+    }
+    @media (max-width:1199px) {
+        &-block{
+            justify-content: center;
+        }
+        &-card{
+            min-width: 470px;
+        }
+        &__link{
+            margin-top: 30px;
+        }
+    }
+}
+// == /catalog ==
 
+// == facts == 
+.facts{
+    &__heading{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 70px;
+    }
+    &__title{
+        @include Bold;
+        font-size: 24px;
+        font-weight: 400;
+    }
+    &__links{
+        &-more{
+            font-size: 16px;
+            color: $col-primary;
+        }
+    }
+    &-block{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__item{
+            text-decoration: none;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+        &__img{
+            height: 200px;
+            overflow: hidden;
+        }
+        &__title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: $text-color;
+            min-height: 80px;
+        }
+    }
+    @media (max-width:1199px) {
+        &-block{
+            justify-content: space-around;
+        }
+    }
+}
+// == /facts == 
 // /main
