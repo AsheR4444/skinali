@@ -294,10 +294,17 @@ body{
     padding: 129px 0;
     &-block{
         padding: 80px;
-        margin-top: -350px;
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-        background: #fff url(../img/form-bg.png) no-repeat center right;
-        background-size: contain;
+        &_calc-bg{
+            background: #fff url(../img/form-bg.png) no-repeat center right;
+            background-size: contain;
+            margin-top: -350px;
+        }
+        &_price-bg{
+            background: #fff url(../img/calc-bg.png) no-repeat center right;
+            background-size: contain;
+            margin-top: -150px;
+        }
     }
     &__title{
         @include Bold;
@@ -311,6 +318,7 @@ body{
         font-size: 21px;
         font-weight: 300;
         margin-bottom: 50px;
+        max-width: 820px;
     }
     &__label{
         font-size: 17px;
@@ -321,7 +329,7 @@ body{
         display: flex;
         align-items: center;
         max-width: 900px;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         &:last-child{
             margin-bottom: 0;
         }
@@ -351,11 +359,32 @@ body{
         height: 80px;
         width: 100%;
     }
+    &__policy{
+        margin-left: 45px;
+        color: #596164;
+        font-size: 17px;
+        font-weight: 300;
+        display: inline-block;
+    }
 }
 @media (max-width:1199px){
     .offer{
         &-block{
             background-position: center right -120px;
+        }
+    }
+}
+@media (max-width:991px){
+    .offer{
+        &-block{
+            &_calc-bg{
+                background: none;
+                background-color: #fff;
+            }
+            &_price-bg{
+                background: none;
+                background-color: #fff;
+            }
         }
     }
 }
@@ -368,9 +397,15 @@ body{
             font-size: 16px;
         }
         &-block{
-            background: none;
-            background-color: #fff;
             padding: 40px;
+            &_calc-bg{
+                background: none;
+                background-color: #fff;
+            }
+            &_price-bg{
+                background: none;
+                background-color: #fff;
+            }
         }
     }
     .form{
@@ -390,6 +425,9 @@ body{
         }
         &__input{
             margin-bottom: 30px;
+        }
+        &__policy{
+            margin-top: 30px;
         }
     }
 }
@@ -649,5 +687,110 @@ body{
     }
 }
 // == /steps == 
+// == reviews == 
+.reviews{
+    background-color: $bg-third;
+    &-block{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    &-item{
+        &__text{
+            max-width: 370px;
+            position: relative;
+            background: #fff;
+            color: #000;
+            border-radius: 15px;
+            @include LtI;
+            padding: 25px 30px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 20px;
+            margin-bottom: 40px;
+            &:after{
+                content: '';
+                position: absolute;
+                height: 20px;
+                bottom: -55px; left: 50%;
+                transform: translateX(-50%);
+                border: 20px solid transparent; border-top: 20px solid #fff;
+            }
+        }
+        &__img{
+            width: 70px;
+            height: 70px;
+            border: 2px solid #6a99e9;
+            background-color: #f6f7f9;
+            border-radius: 50%;
+        }
+        &__name{
+            display: block;
+            font-size: 14px;
+        }
+    }
+}
+// == /reviews == 
 
+// == about ==
+.about{
+    &-block{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &__img{
+            margin: 20px 0;
+            img{
+                max-width: 100%;
+            }
+        }
+        &__text{
+            margin-left: 70px;
+            flex-basis: 50%;
+            font-size: 20px;
+            font-weight: 300;
+            p{
+                margin-bottom: 45px;
+            }
+        }
+    }
+}
+// == /about ==
+
+// == contacts ==
+.contacts{
+    &-block{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+        &__item{
+        }
+        &__img{
+            margin-bottom: 25px;
+        }
+        &__text{
+            font-size: 16px;
+        }
+    }
+    &__links{
+        text-decoration: none;
+        color: $text-color;
+        font-size: 16px;
+    }
+    @media (max-width:768px) {
+        &-block{
+            &__item{
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            &__text{
+                max-width: 200px;
+                margin: auto;
+            }
+        }
+    }
+}
+// == /contacts ==
 // == /main ==

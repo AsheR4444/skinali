@@ -574,10 +574,15 @@ body {
   padding: 129px 0; }
   .offer-block {
     padding: 80px;
-    margin-top: -350px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-    background: #fff url(../img/form-bg.png) no-repeat center right;
-    background-size: contain; }
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); }
+    .offer-block_calc-bg {
+      background: #fff url(../img/form-bg.png) no-repeat center right;
+      background-size: contain;
+      margin-top: -350px; }
+    .offer-block_price-bg {
+      background: #fff url(../img/calc-bg.png) no-repeat center right;
+      background-size: contain;
+      margin-top: -150px; }
   .offer__title {
     font-family: 'Proxima Nova Semibold', sans-serif;
     font-size: 25px;
@@ -588,7 +593,8 @@ body {
     display: block;
     font-size: 21px;
     font-weight: 300;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    max-width: 820px; }
   .offer__label {
     font-size: 17px; }
 
@@ -596,7 +602,7 @@ body {
   display: flex;
   align-items: center;
   max-width: 900px;
-  margin-bottom: 25px; }
+  margin-bottom: 30px; }
   .form__row:last-child {
     margin-bottom: 0; }
 
@@ -623,9 +629,24 @@ body {
   height: 80px;
   width: 100%; }
 
+.form__policy {
+  margin-left: 45px;
+  color: #596164;
+  font-size: 17px;
+  font-weight: 300;
+  display: inline-block; }
+
 @media (max-width: 1199px) {
   .offer-block {
     background-position: center right -120px; } }
+
+@media (max-width: 991px) {
+  .offer-block_calc-bg {
+    background: none;
+    background-color: #fff; }
+  .offer-block_price-bg {
+    background: none;
+    background-color: #fff; } }
 
 @media (max-width: 768px) {
   .offer__title {
@@ -633,9 +654,13 @@ body {
   .offer__subtitle {
     font-size: 16px; }
   .offer-block {
-    background: none;
-    background-color: #fff;
     padding: 40px; }
+    .offer-block_calc-bg {
+      background: none;
+      background-color: #fff; }
+    .offer-block_price-bg {
+      background: none;
+      background-color: #fff; }
   .form__row {
     flex-direction: column; }
     .form__row-checkbox {
@@ -650,7 +675,9 @@ body {
     flex-basis: 100%;
     width: 100%; }
   .form__input {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .form__policy {
+    margin-top: 30px; } }
 
 .feature-block {
   display: flex;
@@ -839,3 +866,80 @@ body {
   @media (max-width: 768px) {
     .step-item {
       width: 100%; } }
+
+.reviews {
+  background-color: #f5f6f8; }
+  .reviews-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center; }
+  .reviews-item__text {
+    max-width: 370px;
+    position: relative;
+    background: #fff;
+    color: #000;
+    border-radius: 15px;
+    font-family: 'Proxima Nova LtIt', sans-serif;
+    padding: 25px 30px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 40px; }
+    .reviews-item__text:after {
+      content: '';
+      position: absolute;
+      height: 20px;
+      bottom: -55px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 20px solid transparent;
+      border-top: 20px solid #fff; }
+  .reviews-item__img {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #6a99e9;
+    background-color: #f6f7f9;
+    border-radius: 50%; }
+  .reviews-item__name {
+    display: block;
+    font-size: 14px; }
+
+.about-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .about-block__img {
+    margin: 20px 0; }
+    .about-block__img img {
+      max-width: 100%; }
+  .about-block__text {
+    margin-left: 70px;
+    flex-basis: 50%;
+    font-size: 20px;
+    font-weight: 300; }
+    .about-block__text p {
+      margin-bottom: 45px; }
+
+.contacts-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center; }
+  .contacts-block__img {
+    margin-bottom: 25px; }
+  .contacts-block__text {
+    font-size: 16px; }
+
+.contacts__links {
+  text-decoration: none;
+  color: #262626;
+  font-size: 16px; }
+
+@media (max-width: 768px) {
+  .contacts-block__item {
+    width: 100%;
+    margin-bottom: 30px; }
+  .contacts-block__text {
+    max-width: 200px;
+    margin: auto; } }
