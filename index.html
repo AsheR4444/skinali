@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
     <title>Фабрика Скинали</title>
 </head>
 <body>
+
     <!-- Section-header -->
     <header class="section-header">
         <div class="menu">
@@ -69,6 +73,7 @@
             </div>
         </div>
     </header>
+
     <!-- /Section-header -->
     <main>
         <section class="offer bg-secondary">
@@ -85,7 +90,14 @@
                         <div class="form__row">
                             <div class="form__group">
                                 <label for="" class="form__label">Вид стекла</label>
-                                <input type="text" class="input form__input">
+                                <input type="hidden" name="type" value="С печатью" id="select-type">
+                                <div class="select form__select">
+                                    <div class="select_checked">С печатью</div>
+                                    <ul class="select__dropdown">
+                                        <li class="select__option" data-value="С печатью" >С печатью</li>
+                                        <li class="select__option" data-value="Без Печати" >Без Печати</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form__group">
                                 <label for="" class="form__label">Ширина, см</label>
@@ -125,6 +137,9 @@
                 </div>
             </div>
         </section>
+        <!-- /.section offer -->
+
+
         <section class="feature section">
             <div class="section-inner">
                 <h2 class="section-title section__title">
@@ -170,6 +185,8 @@
                 </div>
             </div>
         </section>
+        <!-- /.section feature -->
+
         <section class="section catalog">
             <div class="section-inner">
                 <h2 class="section-title section__title">
@@ -254,8 +271,11 @@
                 </div>
             </div>
             <!-- /.section-inner -->
+            <!-- /.section catalog -->
         </section>
         <!-- /.section catalog -->
+
+
         <section class="facts section">
             <div class="section-inner">
                 <div class="facts__heading">
@@ -292,6 +312,8 @@
             <!-- /.section-inner -->
         </section>
         <!-- /.facts -->
+
+
         <section class="section price">
             <div class="section-inner">
                 <h2 class="section-title section__title">
@@ -430,6 +452,8 @@
             </div>
         </section>
         <!-- /.section price -->
+
+
         <section class="section step">
             <div class="section-inner">
                 <h2 class="section-title section__title">
@@ -495,6 +519,46 @@
             <!-- /.section-inner -->
         </section>
         <!-- /.section steps -->
+
+
+        <section class="before">
+            <div class="section-inner">
+                <h2 class="section-title section__title">До и после</h2>
+                <div class="before-slider-wrap">
+                    <div class="before-slider">
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before.jpg" alt="до">
+                                <img src="img/after.jpg" alt="после">
+                            </div>
+                        </div>
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before.jpg" alt="до">
+                                <img src="img/after.jpg" alt="после">
+                            </div>
+                        </div>
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before.jpg" alt="до">
+                                <img src="img/after.jpg" alt="после">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-slider-arrows">
+                        <button class="arrow arrow_left">
+                            <img src="img/slider-arrows_left.png" alt="лево">
+                        </button>
+                        <button class="arrow arrow_right">
+                            <img src="img/slider-arrows-right.png" alt="право">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.section before -->
+
+        
         <section class="section reviews">
             <div class="section-inner">
                 <div class="section-title section__title">
@@ -530,6 +594,8 @@
             <!-- /.section-inner -->
         </section>
         <!-- /.section reviews -->
+
+
         <section class="offer">
             <div class="section-inner">
                 <div class="offer__block offer-block offer-block_price-bg">
@@ -568,6 +634,8 @@
             </div>
         </section>
         <!-- /offer -->
+
+
         <section class="section about">
             <div class="section-inner">
                 <h2 class="section-title section__title">
@@ -589,6 +657,8 @@
             <!-- /.section__inner -->
         </section>
         <!-- /.section about -->
+
+
         <section class="section contacts">
             <div class="section-inner">
                 <h2 class="section-title section__title">
@@ -618,12 +688,62 @@
             <!-- /.section-inner -->
         </section>
         <!-- /.section contacts -->
+
+
         <div class="map" id="map">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8031376f45306409070bc2915e7ade7d2e9e4a37f66dec005c98572afbba14db&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8031376f45306409070bc2915e7ade7d2e9e4a37f66dec005c98572afbba14db&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>
         </div>
+        <section class="section questions">
+            <div class="section-inner">
+                <div class="questions-block">
+                    <div class="questions-block__title">Остались вопросы?</div>
+                    <a href="#" class="questions-block__link">Задайте их менеджеру</a>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="section-inner">
+            <div class="footer-block">
+                <div class="footer__logo">
+                    <h4 class="footer__name">Фабрика скинали №1</h4>
+                    <div class="footer__text">ведущий производитель скинали</div>
+                    <div class="footer__copyright">© Фабрика скинали №1</div>
+                </div>
+                <div class="footer__pay-info">
+                    <img src="img/pay-1.png" alt="Webmoney" class="footer__pay-logo">
+                    <img src="img/pay-2.png" alt="Яндекс Деньги" class="footer__pay-logo">
+                    <img src="img/pay-3.png" alt="MasterCard" class="footer__pay-logo">
+                    <img src="img/pay-4.png" alt="Visa" class="footer__pay-logo">
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__number">+7 499 123-45-67</div>
+                    <a href="mailto:5404177@mail.ru" class="footer__mail">5404177@mail.ru</a>
+                    <a href="#" class="footer__social">
+                        <img src="img/social-1.png" alt="Социальный Сети" class="footer__links">
+                    </a>
+                    <a href="#" class="footer__social">
+                        <img src="img/social-2.png" alt="Социальный Сети" class="footer__links">
+                    </a>
+                    <a href="#" class="footer__social">
+                        <img src="img/social-3.png" alt="Социальный Сети" class="footer__links">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /.section-inner -->
+    </footer>
+    <!-- /.footer -->
     <!-- Spikmi widget -->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=1892"></script>
     <!-- /Spikmi widget -->
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
