@@ -81,6 +81,7 @@ body {
   text-transform: uppercase;
   font-family: 'Proxima Nova Semibold', sans-serif;
   background: #507fe1;
+  text-decoration: none;
   padding: 25px 45px;
   border: none;
   color: #fff;
@@ -110,6 +111,7 @@ body {
   text-transform: uppercase;
   font-family: 'Proxima Nova Semibold', sans-serif;
   background: #507fe1;
+  text-decoration: none;
   background-color: #fff;
   color: #507fe1;
   padding: 17px 22px;
@@ -279,6 +281,7 @@ body {
     text-transform: uppercase;
     font-family: 'Proxima Nova Semibold', sans-serif;
     background: #507fe1;
+    text-decoration: none;
     padding: 25px 45px;
     border: none;
     color: #fff;

@@ -31,6 +31,7 @@ $bg-third: #f5f6f8;
     text-transform: uppercase;
     @include Bold;
     background: $col-primary;
+    text-decoration: none;
 }
 @mixin main-button{
     @include button;
