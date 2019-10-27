@@ -1,6 +1,15 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const browserSync = require("browser-sync").create();
+var tinypng = require('gulp-tinypng-compress');
+ 
+gulp.task('tinypng', function () {
+    gulp.src('img/**/*.{png,jpg,jpeg}')
+        .pipe(tinypng({
+            key: 'PDrQ8G7cGFv5N1mdV17DgDQYTR7HB7cy',
+        }))
+        .pipe(gulp.dest('images'));
+});
 
 function style() {
   return gulp
